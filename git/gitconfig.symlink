@@ -1,10 +1,10 @@
 [user]
-	name = Phillip Verheyden
+	name = Phillip Verheyden 
 	email = pverheyden@gmail.com
 [core]
     autocrlf = input
     editor = vim 
-	excludesfile = /Users/phillipverheyden/.gitignore_global
+	excludesfile = /Users/phillip/.gitignore_global
 [alias]
     co = checkout
     ci = commit
@@ -27,3 +27,5 @@
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
     keepBackup = false
+[hub]
+    protocol = ssh
