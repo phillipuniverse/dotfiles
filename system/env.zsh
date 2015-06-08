@@ -13,6 +13,7 @@ export MULE_HOME=/usr/lib/mule-standalone-3.1.2
 export GRAILS_HOME=/usr/lib/grails-2.0.0
 export MAGICK_HOME=/usr/lib/ImageMagick
 export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export GOPATH=$HOME/.go
 export MANPATH="/opt/local/share/main:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/opt/coreutils/libexec/gnubin:$ZSH/bin:$ZSH/bin/private:/usr/local/bin:/usr/local/sbin:storm:/usr/local/Cellar/go/1.2.1/libexec/bin:/usr/local/mysql/bin:$PATH"
@@ -71,4 +72,13 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # Boot2Docker
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH=/Users/phillipverheyden/.boot2docker/certs/boot2docker-vm
 
+
+# Hubot Versions
+export HUBOT_GITHUB_TOKEN=984b446919ba3a5eec77064fbb7582adfd59b4be
+export HUBOT_LOG_LEVEL="debug"
+
+# Set the ulimit for maximum opened files
+ulimit -S -n 10000
