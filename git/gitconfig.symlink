@@ -27,5 +27,3 @@
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
     keepBackup = false
-[hub]
-    protocol = ssh
