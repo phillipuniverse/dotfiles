@@ -64,9 +64,6 @@ export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify"
 #Rackspace
 export RAX_CREDS_FILE=~/.pyrax.cfg
 
-# Correct operation of Ruby via https
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
 # Groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
