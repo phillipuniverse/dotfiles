@@ -72,10 +72,5 @@ export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 export DOCKER_TLS_VERIFY=1
 export DOCKER_CERT_PATH=/Users/phillipverheyden/.boot2docker/certs/boot2docker-vm
 
-
-# Hubot Versions
-export HUBOT_GITHUB_TOKEN=984b446919ba3a5eec77064fbb7582adfd59b4be
-export HUBOT_LOG_LEVEL="debug"
-
 # Set the ulimit for maximum opened files
 ulimit -S -n 10000
