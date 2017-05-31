@@ -60,7 +60,8 @@ fi
 
 export BEES_HOME=~/software/cloudbees-sdk-0.7.4
 export JAVA_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify"
-export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify"
+export M2_HOME="/usr/local/Cellar/maven/3.5.0/libexec"
+export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Dmaven.multiModuleProjectDirectory=$M2_HOME"
 
 #Rackspace
 export RAX_CREDS_FILE=~/.pyrax.cfg
@@ -68,10 +69,8 @@ export RAX_CREDS_FILE=~/.pyrax.cfg
 # Groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
-# Boot2Docker
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-export DOCKER_TLS_VERIFY=1
-export DOCKER_CERT_PATH=/Users/phillipverheyden/.boot2docker/certs/boot2docker-vm
+export JREBEL_PATH=/Users/phillip/jrebel/lib/libjrebel64.dylib
+export XREBEL_PATH=/Users/phillip/xrebel/xrebel.jar
 
 # Set the ulimit for maximum opened files
 ulimit -S -n 10000
