@@ -1,10 +1,11 @@
 [user]
-	name = Phillip Verheyden 
+	name = Phillip Verheyden
 	email = pverheyden@gmail.com
 [core]
     autocrlf = input
     editor = vim 
 	excludesfile = /Users/phillip/.gitignore_global
+    commentchar = $
 [alias]
     co = checkout
     ci = commit
