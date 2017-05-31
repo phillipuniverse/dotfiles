@@ -30,7 +30,8 @@ alias pubkey="more ~/.ssh/id_dsa.pub | pbcopy | echo '=> Public key copied to pa
 
 #Shorter Git commands
 alias gist='git status'
-alias st='open -a SourceTree `pwd`'
+alias gitroot='cd $(git rev-parse --show-toplevel) && echo "$_"'
+alias st='open -a SourceTree `gitroot`'
 
 #replace Git with Hub
 alias git='hub'
@@ -57,4 +58,4 @@ alias usejava8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
 alias startmysql='sudo /usr/local/mysql/support-files/mysql.server start'
 
-alias fuck='$(thefuck $(fc -ln -1))'
+alias dcc='docker rm -v $(docker ps -f "status=exited" -q)'
