@@ -57,3 +57,4 @@ au BufRead,BufNewFile *.html set filetype=html
 au BufRead,BufNewFile *.xml set filetype=xml
 au BufRead,BufNewFile *.sql set filetype=sql
 set mouse=a
+set paste
