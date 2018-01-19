@@ -55,6 +55,7 @@ alias log='tail -f logs/catalina.out'
 alias usejava6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
 alias usejava7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias usejava8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+alias usejava9='export JAVA_HOME=$(/usr/libexec/java_home -v 9.0)'
 
 alias startmysql='sudo /usr/local/mysql/support-files/mysql.server start'
 
