@@ -9,7 +9,6 @@ export SAVEHIST=1000000
 
 usejava8
 
-export MVN_HOME=/usr/lib/apache-maven-3.0.2
 export MULE_HOME=/usr/lib/mule-standalone-3.1.2
 export GRAILS_HOME=/usr/lib/grails-2.0.0
 export MAGICK_HOME=/usr/lib/ImageMagick
@@ -60,8 +59,7 @@ fi
 
 export BEES_HOME=~/software/cloudbees-sdk-0.7.4
 export JAVA_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify"
-export M2_HOME="/usr/local/Cellar/maven/3.5.0/libexec"
-export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Dmaven.multiModuleProjectDirectory=$M2_HOME"
+export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify -XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 
 #Rackspace
 export RAX_CREDS_FILE=~/.pyrax.cfg
@@ -74,3 +72,7 @@ export XREBEL_PATH=/Users/phillip/xrebel/xrebel.jar
 
 # Set the ulimit for maximum opened files
 ulimit -S -n 10000
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
