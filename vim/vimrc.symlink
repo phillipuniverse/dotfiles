@@ -58,3 +58,6 @@ au BufRead,BufNewFile *.xml set filetype=xml
 au BufRead,BufNewFile *.sql set filetype=sql
 set mouse=a
 set paste
+set clipboard=unnamed
+set backspace=indent,eol,start
+
