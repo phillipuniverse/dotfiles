@@ -79,3 +79,6 @@ ulimit -S -n 10000
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+
+# Initialize rbenv
+eval "$(rbenv init -)"
