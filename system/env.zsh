@@ -70,6 +70,9 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export JREBEL_PATH=/Users/phillip/jrebel/lib/libjrebel64.dylib
 export XREBEL_PATH=/Users/phillip/xrebel/xrebel.jar
 
+#GPG
+export GPG_TTY=$(tty)
+
 # Set the ulimit for maximum opened files
 ulimit -S -n 10000
 

@@ -1,6 +1,7 @@
 [user]
 	name = Phillip Verheyden
 	email = pverheyden@gmail.com
+	signingkey = FF28A0E96357CFEC
 [core]
     autocrlf = input
     editor = vim 
@@ -30,3 +31,8 @@
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
     keepBackup = false
+[commit]
+	template = /Users/phillip/.stCommitMsg
+	gpgsign = true
+[gpg]
+	program = gpg

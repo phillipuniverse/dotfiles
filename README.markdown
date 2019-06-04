@@ -25,6 +25,39 @@ though.
 
 You should also go and modify `~/.dotfiles/git/gitconfig.symlink` and change that to your own information and not mine.
 
+### Automatic git GPG Signing
+
+Original instructions [here]( https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-setup-gpg), some modifications made to work with this setup. 
+
+1. Install reqs
+  ```console
+  brew install gnupg gpg-agent pinentry-mac
+  ```
+
+Create `~/.gnupg/gpg-agent.conf`:
+
+```
+# Enables GPG to find gpg-agent
+use-standard-socket
+
+# Connects gpg-agent to the OSX keychain via the brew-installed
+# pinentry program from GPGtools. This is the OSX 'magic sauce',
+# allowing the gpg key's passphrase to be stored in the login
+# keychain, enabling automatic key signing.
+pinentry-program /usr/local/bin/pinentry-mac
+```
+
+Create `~/.gnupg/gpg.conf`:
+
+```
+use-agent
+
+# This silences the "you need a passphrase" message once the passphrase handling is all set.
+# Use at your own discretion - may prevent the successful interactive use of some operations.
+# It is working fine for my use cases though.
+batch
+```
+
 ## Items of note <Section blatantly ripped off>
 
 There's a few special files in the hierarchy.
