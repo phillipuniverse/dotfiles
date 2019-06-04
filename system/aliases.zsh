@@ -37,7 +37,9 @@ alias st='open -a SourceTree `gitroot`'
 alias git='hub'
 
 alias mci='mvn clean install -DskipTests -Pblc-development'
+alias mcp='mvn clean package -DskipTests'
 alias mcit='mvn clean install -Pblc-development'
+alias mcpt='mvn clean package'
 alias mi='mvn install -DskipTests -Pblc-development'
 
 #blc docs
