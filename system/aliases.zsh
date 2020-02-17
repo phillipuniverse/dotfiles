@@ -60,6 +60,7 @@ alias usejava8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 alias usejava9='export JAVA_HOME=$(/usr/libexec/java_home -v 9.0)'
 alias usejava10='export JAVA_HOME=$(/usr/libexec/java_home -v 10.0)'
 alias usejava11='export JAVA_HOME=$(/usr/libexec/java_home -v 11.0)'
+alias usejava13='export JAVA_HOME=$(/usr/libexec/java_home -v 13.0)'
 
 alias startmysql='sudo /usr/local/mysql/support-files/mysql.server start'
 
