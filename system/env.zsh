@@ -79,6 +79,11 @@ ulimit -S -n 10000
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-
 # Initialize rbenv
 eval "$(rbenv init -)"
+
+# Weird Python cryptography fix, copy/pasta from https://github.com/pyca/cryptography/issues/3489#issuecomment-312607156
+# zlib fix from https://github.com/python-pillow/Pillow/issues/3438#issuecomment-584751745
+export CPPFLAGS="-I/usr/local/opt/openssl/include:/usr/local/opt/zlib/include"
+export LDFLAGS="-L/usr/local/opt/openssl/lib:/usr/local/opt/zlib/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
