@@ -7,17 +7,15 @@ configuration by myself, so this no longer requires that.
 
 ## Usage
 
-Similar steps as Holman's:
-
+- `chsh -s /bin/zsh`
+- Install a JVM from https://adoptopenjdk.net/
+- Add the iTerm2 shell integration `curl -L https://iterm2.com/shell_integration/zsh \
+-o ~/.iterm2_shell_integration.zsh`
 - `git clone git://github.com/phillipuniverse/dotfiles ~/.dotfiles`
-- `brew install rbenv`
-- `brew install autojump`
-- `brew install coreutils`
-- `brew install hub`
+- `xcode-select --install`
+- `brew install grc gcc rbenv autojump coreutils hub nvm`
 - `cd ~/.dotfiles`
 - `rake install`
-- `brew install grc` (optional, will add color to a few utilities)
-- `chsh -s /bin/zsh` (make sure this path exists on your machine or you're gonna have a bad time)
 
 The install rake task will symlink the appropriate files in `.dotfiles` to your
 home directory. Everything is configured and tweaked within `~/.dotfiles`,
@@ -27,11 +25,11 @@ You should also go and modify `~/.dotfiles/git/gitconfig.symlink` and change tha
 
 ### Automatic git GPG Signing
 
-Original instructions [here]( https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-setup-gpg), some modifications made to work with this setup. 
+Original instructions [here](https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-setup-gpg), some modifications made to work with this setup. 
 
 1. Install reqs
   ```console
-  brew install gnupg gpg-agent pinentry-mac
+  brew install gnupg pinentry-mac
   ```
 
 Create `~/.gnupg/gpg-agent.conf`:
