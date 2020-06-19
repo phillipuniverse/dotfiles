@@ -65,3 +65,6 @@ alias usejava13='export JAVA_HOME=$(/usr/libexec/java_home -v 13.0)'
 alias startmysql='sudo /usr/local/mysql/support-files/mysql.server start'
 
 alias dcc='docker rm -v $(docker ps -f "status=exited" -q)'
+
+# Shipwell-specific
+alias make-swagger-files='python ./swagger/combine_swagger.py && python ./swagger/readme_docs.py && python ./swagger/parse_public_swagger.py'
