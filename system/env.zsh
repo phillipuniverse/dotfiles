@@ -84,6 +84,17 @@ eval "$(rbenv init -)"
 
 # Weird Python cryptography fix, copy/pasta from https://github.com/pyca/cryptography/issues/3489#issuecomment-312607156
 # zlib fix from https://github.com/python-pillow/Pillow/issues/3438#issuecomment-584751745
-export CPPFLAGS="-I/usr/local/opt/openssl/include:/usr/local/opt/zlib/include"
-export LDFLAGS="-L/usr/local/opt/openssl/lib:/usr/local/opt/zlib/lib"
+# Updated the zlib and bzip fix from https://github.com/pyenv/pyenv/issues/1737#issuecomment-738080459
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib -L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include -I/usr/local/opt/openssl/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+
+# Workaround for debugging Python background thread processes (e.g. RQ workers) in Pycharm
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+
+# Weird Python compatibility thing see https://github.com/pypa/pipenv/issues/187
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
