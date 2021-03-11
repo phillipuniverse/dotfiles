@@ -26,10 +26,10 @@
 [branch]
     autosetuprebase = always
 [difftool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	cmd = /Applications/PyCharm.app/Contents/MacOS/pycharm diff $LOCAL $PWD/$REMOTE
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /Applications/PyCharm.app/Contents/MacOS/pycharm merge $PWD/$LOCAL $PWD/$REMOTE $PWD/$BASE $PWD/$MERGED
 	trustExitCode = true
     keepBackup = false
 [commit]
