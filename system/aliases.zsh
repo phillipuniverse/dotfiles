@@ -68,3 +68,4 @@ alias dcc='docker rm -v $(docker ps -f "status=exited" -q)'
 
 # Shipwell-specific
 alias make-swagger-files='python ./swagger/combine_swagger.py && python ./swagger/readme_docs.py && python ./swagger/parse_public_swagger.py'
+alias swelldockerlogin="aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 701656644016.dkr.ecr.us-west-2.amazonaws.com"
