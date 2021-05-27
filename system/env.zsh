@@ -98,3 +98,10 @@ export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 # Weird Python compatibility thing see https://github.com/pypa/pipenv/issues/187
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Initializes pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+

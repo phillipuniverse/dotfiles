@@ -79,6 +79,3 @@ if [ -f '/Users/phillip/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/phillip
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/phillip/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/phillip/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Auto-activates pyenv
-eval "$(pyenv init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
