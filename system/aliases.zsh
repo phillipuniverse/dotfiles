@@ -61,6 +61,7 @@ alias usejava9='export JAVA_HOME=$(/usr/libexec/java_home -v 9.0)'
 alias usejava10='export JAVA_HOME=$(/usr/libexec/java_home -v 10.0)'
 alias usejava11='export JAVA_HOME=$(/usr/libexec/java_home -v 11.0)'
 alias usejava13='export JAVA_HOME=$(/usr/libexec/java_home -v 13.0)'
+alias usejava17='export JAVA_HOME=$(/usr/libexec/java_home -v 17.0)'
 
 alias startmysql='sudo /usr/local/mysql/support-files/mysql.server start'
 
@@ -69,3 +70,11 @@ alias dcc='docker rm -v $(docker ps -f "status=exited" -q)'
 # Shipwell-specific
 alias make-swagger-files='python ./swagger/combine_swagger.py && python ./swagger/readme_docs.py && python ./swagger/parse_public_swagger.py'
 alias swelldockerlogin="aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 701656644016.dkr.ecr.us-west-2.amazonaws.com"
+
+function usepoetry1() {
+	export PATH="/Users/phillip/.poetry/bin:$PATH"
+}
+
+function usepoetry2() {
+	export PATH=${PATH//\/Users\/phillip\/.poetry\/bin:}
+}

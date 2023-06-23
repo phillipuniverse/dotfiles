@@ -7,7 +7,7 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-usejava8
+usejava17
 
 export MULE_HOME=/usr/lib/mule-standalone-3.1.2
 export GRAILS_HOME=/usr/lib/grails-2.0.0
@@ -58,8 +58,8 @@ then
 fi
 
 export BEES_HOME=~/software/cloudbees-sdk-0.7.4
-export JAVA_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify"
-export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -noverify -XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+export JAVA_OPTS="-Xmx2048m -noverify"
+export MAVEN_OPTS="-Xmx2048m -noverify -XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 
 #Rackspace
 export RAX_CREDS_FILE=~/.pyrax.cfg
