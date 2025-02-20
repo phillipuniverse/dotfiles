@@ -14,6 +14,7 @@ export GRAILS_HOME=/usr/lib/grails-2.0.0
 export MAGICK_HOME=/usr/lib/ImageMagick
 export NODE_PATH="/usr/local/lib/node"
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+export NODE_OPTIONS="--max-old-space-size=8192"
 export GOPATH=$HOME/.go
 export MANPATH="/opt/local/share/main:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:$ZSH/bin:$ZSH/bin/private:/usr/local/bin:/usr/local/sbin:storm:/usr/local/Cellar/go/1.2.1/libexec/bin:/usr/local/mysql/bin:$HOME/.cargo/bin:$HOME/.local/bin:/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
@@ -51,12 +52,6 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
 ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
 
-# GRC colorizes nifty unix tools all over the place
-if $(grc &>/dev/null)
-then
-  source `brew --prefix`/etc/grc.bashrc
-fi
-
 export BEES_HOME=~/software/cloudbees-sdk-0.7.4
 export JAVA_OPTS="-Xmx2048m -noverify"
 export MAVEN_OPTS="-Xmx2048m -noverify -XX:+TieredCompilation -XX:TieredStopAtLevel=1"
@@ -77,7 +72,6 @@ export GPG_TTY=$(tty)
 ulimit -S -n 10000
 
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
 
 # Initialize rbenv
 eval "$(rbenv init -)"
