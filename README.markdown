@@ -34,7 +34,7 @@ Original instructions [here](https://gist.github.com/bmhatfield/cc21ec0a3a2df963
   brew install gnupg pinentry-mac
   ```
 
-Create `~/.gnupg/gpg-agent.conf`:
+Create `~/.gnupg/gpg-agent.conf` with `mkdir ~/.gnpug && vim gpg-agent.conf`:
 
 ```
 # Enables GPG to find gpg-agent
