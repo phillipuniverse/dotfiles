@@ -9,17 +9,15 @@ configuration by myself, so this no longer requires that.
 
 - Install [iTerm](https://iterm2.com/)
 - Install [Homebrew](https://brew.sh/)
-- Add the iTerm2 shell integration `curl -L https://iterm2.com/shell_integration/zsh \
--o ~/.iterm2_shell_integration.zsh`
-- `xcode-select --install`
-- `brew install autojump autoconf awscli bzip2 ca-certificates cffi cmake coreutils gcc gettext git git-lfs glib gnu-time grc grep hub jq libgpg-error libtool libuv lz4 mongosh ncdu nvm pinentry pinentry-mac poetry pyenv rbenv ruby-build rsync tfenv tree wget yq zsh`
+- Install a JVM from https://adoptopenjdk.net/ (last 3 LTS versions)
+- `brew install autojump autoconf awscli bzip2 ca-certificates cffi cmake coreutils curl gcc gettext git git-lfs glib gnu-time grc grep hub jq libgpg-error libtool libuv lz4 mongosh ncdu nvm pinentry pinentry-mac poetry pyenv rbenv ruby-build rsync tfenv tree uv vim wget yq zsh`
 - `chsh -s /bin/zsh`
 - Copy SSH key from Bitwarden to ~/.ssh/id_rsa and set correct chmod permissions `chmod 600 ~/.ssh/id_rsa`
 - `git clone git@github.com/phillipuniverse/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `rake install`
-- Copy in zsh_history from known <<decide on long term storage>> to `~/.zsh_history`
-- Install a JVM from https://adoptopenjdk.net/ (last 3 LTS versions)
+- Add the iTerm2 shell integration `curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh`
+- Copy in zsh_history from known location `#TODO: decide on long term storage` to `~/.zsh_history`
 
 The install rake task will symlink the appropriate files in `.dotfiles` to your
 home directory. Everything is configured and tweaked within `~/.dotfiles`,
