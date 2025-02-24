@@ -34,7 +34,7 @@ Original instructions [here](https://gist.github.com/bmhatfield/cc21ec0a3a2df963
   brew install gnupg pinentry-mac
   ```
 
-Create `~/.gnupg/gpg-agent.conf` with `mkdir ~/.gnpug && vim gpg-agent.conf`:
+2. Create `~/.gnupg/gpg-agent.conf` with `mkdir ~/.gnpug && vim gpg-agent.conf`:
 
 ```
 # Enables GPG to find gpg-agent
@@ -47,7 +47,7 @@ use-standard-socket
 pinentry-program /usr/local/bin/pinentry-mac
 ```
 
-Create `~/.gnupg/gpg.conf`:
+3. Create `~/.gnupg/gpg.conf`:
 
 ```
 use-agent
@@ -57,6 +57,9 @@ use-agent
 # It is working fine for my use cases though.
 batch
 ```
+
+4. Install GPG Suite from https://gpgtools.org
+5. Open GPG Suite, find the GPG private key from the secure location and copy to clipboard. GPG Suite will prompt to automatically import the key
 
 ## Items of note <Section blatantly ripped off>
 
