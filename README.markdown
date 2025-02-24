@@ -5,17 +5,21 @@ substantially stripped down for my particular tastes. This used to also
 utilize oh-my-zsh, but I've found that I'd rather manage my entire 
 configuration by myself, so this no longer requires that.
 
-## Usage
+## Setup a new machine
 
-- `chsh -s /bin/zsh`
-- Install a JVM from https://adoptopenjdk.net/
+- Install [iTerm](https://iterm2.com/)
+- Install [Homebrew](https://brew.sh/)
 - Add the iTerm2 shell integration `curl -L https://iterm2.com/shell_integration/zsh \
 -o ~/.iterm2_shell_integration.zsh`
-- `git clone git://github.com/phillipuniverse/dotfiles ~/.dotfiles`
 - `xcode-select --install`
-- `brew install grc gcc rbenv autojump coreutils hub nvm`
+- `brew install autojump autoconf awscli bzip2 ca-certificates cffi cmake coreutils gcc gettext git git-lfs glib gnu-time grc grep hub jq libgpg-error libtool libuv lz4 mongosh ncdu nvm pinentry pinentry-mac poetry pyenv rbenv ruby-build rsync tfenv tree wget yq zsh`
+- `chsh -s /bin/zsh`
+- Copy SSH key from Bitwarden to ~/.ssh/id_rsa and set correct chmod permissions `chmod 600 ~/.ssh/id_rsa`
+- `git clone git@github.com/phillipuniverse/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `rake install`
+- Copy in zsh_history from known <<decide on long term storage>> to `~/.zsh_history`
+- Install a JVM from https://adoptopenjdk.net/ (last 3 LTS versions)
 
 The install rake task will symlink the appropriate files in `.dotfiles` to your
 home directory. Everything is configured and tweaked within `~/.dotfiles`,
