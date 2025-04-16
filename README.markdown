@@ -11,6 +11,7 @@ configuration by myself, so this no longer requires that.
 - Install [Homebrew](https://brew.sh/)
 - Install a JVM from https://adoptopenjdk.net/ (last 3 LTS versions)
 - `brew install autojump autoconf awscli bzip2 ca-certificates cffi cmake coreutils curl gcc gettext git git-lfs glib gnu-time grc grep hub jq libgpg-error libtool libuv lz4 mongosh ncdu nvm pinentry pinentry-mac poetry pyenv rbenv ruby-build rsync tfenv tree uv vim wget yq zsh`
+- Install sdkman `brew tap sdkman/tap && brew install sdkman-cli`
 - `chsh -s /bin/zsh`
 - Copy SSH key from Bitwarden to ~/.ssh/id_rsa and set correct chmod permissions `chmod 600 ~/.ssh/id_rsa`
 - `git clone git@github.com:phillipuniverse/dotfiles ~/.dotfiles`
