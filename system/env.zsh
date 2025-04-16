@@ -7,8 +7,6 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-usejava17
-
 export MULE_HOME=/usr/lib/mule-standalone-3.1.2
 export GRAILS_HOME=/usr/lib/grails-2.0.0
 export MAGICK_HOME=/usr/lib/ImageMagick

@@ -11,7 +11,7 @@ configuration by myself, so this no longer requires that.
 - Install [Homebrew](https://brew.sh/)
 - Install a JVM from https://adoptopenjdk.net/ (last 3 LTS versions)
 - `brew install autojump autoconf awscli bzip2 ca-certificates cffi cmake coreutils curl gcc gettext git git-lfs glib gnu-time grc grep hub jq libgpg-error libtool libuv lz4 mongosh ncdu nvm pinentry pinentry-mac poetry pyenv rbenv ruby-build rsync tfenv tree uv vim wget yq zsh`
-- Install sdkman `brew tap sdkman/tap && brew install sdkman-cli`
+- Install sdkman `brew tap sdkman/tap && brew install sdkman-cli && sdk install java`
 - `chsh -s /bin/zsh`
 - Copy SSH key from Bitwarden to ~/.ssh/id_rsa and set correct chmod permissions `chmod 600 ~/.ssh/id_rsa`
 - `git clone git@github.com:phillipuniverse/dotfiles ~/.dotfiles`
@@ -84,9 +84,6 @@ See current status when you're in a Git repository (* indicates uncommitted chan
 
 Git aliases like `gist` for `git status` and `git hist` to replace `git log`:
 ![gitalias](http://cl.ly/image/2t2j0t0T3r3z/Screen%20Shot%202015-01-28%20at%209.59.15%20PM.png)
-
-Quickly switch between versions of Java (auto-selects the latest minor version of 1.6, 1.7 and 1.8) with `usejava6`, `usejava7`, `usejava8`:
-![java](http://cl.ly/image/3L0M0m1V3B2r/Screen%20Shot%202015-01-28%20at%2010.07.47%20PM.png)
 
 [Jump around with `j`](https://github.com/joelthelion/autojump)
 
