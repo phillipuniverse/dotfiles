@@ -14,8 +14,8 @@ export NODE_PATH="/usr/local/lib/node"
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export NODE_OPTIONS="--max-old-space-size=8192"
 export GOPATH=$HOME/.go
-export MANPATH="/opt/local/share/main:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:$ZSH/bin:$ZSH/bin/private:/usr/local/bin:/usr/local/sbin:storm:/usr/local/Cellar/go/1.2.1/libexec/bin:/usr/local/mysql/bin:$HOME/.cargo/bin:$HOME/.local/bin:/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export MANPATH="/opt/local/share/main:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:/opt/homebrew/opt/coreutils/libexec/gnuman:/opt/homebrew/opt/gnu-sed/libexec/gnuman:$MANPATH"
+export PATH="/opt/local/bin:/opt/local/sbin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:$ZSH/bin:$ZSH/bin/private:/usr/local/bin:/usr/local/sbin:storm:/opt/homebrew/opt/go/1.2.1/libexec/bin:/usr/local/mysql/bin:$HOME/.cargo/bin:$HOME/.local/bin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # Environment settings
 setopt NO_BG_NICE # don't nice background tasks
