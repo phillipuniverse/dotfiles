@@ -92,3 +92,6 @@ eval "$(uvx --generate-shell-completion zsh)"
 export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
+if command -v steadily-cli 1>/dev/null 2>&1; then
+  eval "$(steadily-cli --completions zsh)"
+fi
