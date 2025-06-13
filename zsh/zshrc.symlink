@@ -95,3 +95,8 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 if command -v steadily-cli 1>/dev/null 2>&1; then
   eval "$(steadily-cli --completions zsh)"
 fi
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
