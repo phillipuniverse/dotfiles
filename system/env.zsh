@@ -74,13 +74,6 @@ export NVM_DIR="$HOME/.nvm"
 # Initialize rbenv
 eval "$(rbenv init -)"
 
-# Weird Python cryptography fix, copy/pasta from https://github.com/pyca/cryptography/issues/3489#issuecomment-312607156
-# zlib fix from https://github.com/python-pillow/Pillow/issues/3438#issuecomment-584751745
-# Updated the zlib and bzip fix from https://github.com/pyenv/pyenv/issues/1737#issuecomment-738080459
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib -L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include -I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-
 # Workaround for debugging Python background thread processes (e.g. RQ workers) in Pycharm
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
