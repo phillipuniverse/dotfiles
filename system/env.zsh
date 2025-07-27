@@ -15,7 +15,7 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export NODE_OPTIONS="--max-old-space-size=8192"
 export GOPATH=$HOME/.go
 export MANPATH="/opt/local/share/main:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:/opt/homebrew/opt/coreutils/libexec/gnuman:/opt/homebrew/opt/gnu-sed/libexec/gnuman:$MANPATH"
-export PATH="/opt/local/bin:/opt/local/sbin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:$ZSH/bin:$ZSH/bin/private:/usr/local/bin:/usr/local/sbin:storm:/opt/homebrew/opt/go/1.2.1/libexec/bin:/usr/local/mysql/bin:$HOME/.cargo/bin:$HOME/.local/bin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="/opt/local/bin:/opt/local/sbin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:$ZSH/bin:$ZSH/bin/private:/usr/local/bin:/usr/local/sbin:storm:/opt/homebrew/opt/go/1.2.1/libexec/bin:/usr/local/mysql/bin:$HOME/.cargo/bin:$HOME/.local/bin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$HOME/.rbenv/bin:$PATH"
 
 # Environment settings
 setopt NO_BG_NICE # don't nice background tasks
@@ -70,9 +70,6 @@ export GPG_TTY=$(tty)
 ulimit -S -n 10000
 
 export NVM_DIR="$HOME/.nvm"
-
-# Initialize rbenv
-eval "$(rbenv init -)"
 
 # Workaround for debugging Python background thread processes (e.g. RQ workers) in Pycharm
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
