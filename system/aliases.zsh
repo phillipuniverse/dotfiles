@@ -30,7 +30,7 @@ alias pubkey="more ~/.ssh/id_dsa.pub | pbcopy | echo '=> Public key copied to pa
 
 #Shorter Git commands
 alias gist='git status'
-alias gitroot='cd $(git rev-parse --show-toplevel) && echo "$_"'
+alias gitroot='git rev-parse --show-toplevel'
 alias st='open -a SourceTree `gitroot`'
 
 #replace Git with Hub
