@@ -89,3 +89,10 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 # Initialize rbenv
 eval "$(rbenv init - zsh)"
+
+
+# Postgres 16
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib:$LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include:$CPPFLAGS"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@16/lib/pkgconfig"
