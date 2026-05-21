@@ -88,6 +88,7 @@ if [ -f '/Users/phillip/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/p
 
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+eval "$(steadily-cli --completions zsh)"
 
 export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
@@ -96,3 +97,8 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/phillip/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
