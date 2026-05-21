@@ -69,3 +69,7 @@ function usepoetry1() {
 function usepoetry2() {
 	export PATH=${PATH//\/Users\/phillip\/.poetry\/bin:}
 }
+
+alias kstg='kubectl config use-context steadily-staging.us-west-2'
+alias kprod='kubectl config use-context steadily-prod.us-west-2'
+
