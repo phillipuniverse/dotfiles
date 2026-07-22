@@ -23,6 +23,8 @@ for config_file ($ZSH/**/completion.sh) source $config_file
 # autojump
 if [ -f `brew --prefix`/etc/autojump.sh ]; then
   . `brew --prefix`/etc/autojump.sh
+  # remove autojump's `jo` (open in file browser) command
+  unset -f jo 2>/dev/null
 fi
 
 # GRC colorizes nifty unix tools all over the place
