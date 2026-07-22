@@ -1,8 +1,18 @@
 require 'rake'
 
+# foo.symlink links to ~/.foo; foo.symlink-nodot links to ~/foo
+def link_target(linkable)
+  file = linkable.split('/').last
+  if file.end_with?('.symlink-nodot')
+    "#{ENV["HOME"]}/#{file.sub(/\.symlink-nodot$/, '')}"
+  else
+    "#{ENV["HOME"]}/.#{file.sub(/\.symlink$/, '')}"
+  end
+end
+
 desc "Hook our dotfiles into system-standard positions."
 task :install do
-  linkables = Dir.glob('*/**{.symlink}')
+  linkables = Dir.glob('*/**{.symlink,.symlink-nodot}')
 
   skip_all = false
   overwrite_all = false
@@ -12,8 +22,7 @@ task :install do
     overwrite = false
     backup = false
 
-    file = linkable.split('/').last.split('.symlink').last
-    target = "#{ENV["HOME"]}/.#{file}"
+    target = link_target(linkable)
 
     if File.exists?(target) || File.symlink?(target)
       unless skip_all || overwrite_all || backup_all
@@ -27,8 +36,9 @@ task :install do
         when 's' then next
         end
       end
+      next if skip_all
       FileUtils.rm_rf(target) if overwrite || overwrite_all
-      `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
+      `mv "#{target}" "#{target}.backup"` if backup || backup_all
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
@@ -36,19 +46,18 @@ end
 
 task :uninstall do
 
-  Dir.glob('**/*.symlink').each do |linkable|
+  Dir.glob('**/*{.symlink,.symlink-nodot}').each do |linkable|
 
-    file = linkable.split('/').last.split('.symlink').last
-    target = "#{ENV["HOME"]}/.#{file}"
+    target = link_target(linkable)
 
     # Remove all symlinks created during installation
     if File.symlink?(target)
       FileUtils.rm(target)
     end
-    
+
     # Replace any backups made during installation
-    if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
-      `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"` 
+    if File.exists?("#{target}.backup")
+      `mv "#{target}.backup" "#{target}"`
     end
 
   end

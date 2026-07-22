@@ -1,0 +1,15 @@
+# Agent guidelines
+
+## Long-running commands and background tasks
+
+- **Live progress is required.** When running a long-running script in the background, never pipe it through `tail`, `head`, or anything else that buffers output until the stream ends (e.g. `./script.py 2>&1 | tail -40`). That leaves the task output empty for the entire run, making a working run indistinguishable from a hung one. Run the command directly (`./script.py 2>&1`) so progress streams to the output file, and truncate afterward if needed.
+- Scripts that process many items should emit periodic progress lines (e.g. every N items), flushing stdout so progress is visible when output is piped or redirected.
+
+## Scripts that write output files
+
+- **Write incrementally, not all at the end.** Never buffer all results in memory and dump the output file in one shot when the script finishes. Open the output file up front and write each result (or small batch) as it completes, flushing periodically. This is memory efficient, the growing file doubles as a progress indicator, and a crash partway through still leaves usable data instead of losing everything.
+- For concurrent work, use a bounded in-flight window and write rows in order as their results complete, rather than collecting every future before writing.
+
+## Preferences
+
+- Do not write to the persistent memory directory; record durable guidance in this AGENTS.md instead.
